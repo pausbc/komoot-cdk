@@ -1,4 +1,4 @@
-package com.myorg;
+package com.pausub.challenge.signups;
 
 import software.amazon.awscdk.core.*;
 import software.amazon.awscdk.services.dynamodb.Attribute;

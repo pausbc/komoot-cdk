@@ -1,4 +1,4 @@
-package com.myorg;
+package com.pausub.challenge.signups;
 
 import software.amazon.awscdk.core.App;
 import software.amazon.awscdk.core.Environment;

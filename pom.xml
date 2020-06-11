@@ -29,7 +29,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <configuration>
-                    <mainClass>com.myorg.KomootCdkApp</mainClass>
+                    <mainClass>com.pausub.challenge.signups.KomootCdkApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
