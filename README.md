@@ -9,7 +9,7 @@ Resources:
 
 ## Notes 
 * Deployed to eu-west-1 region
-* Cdk destroy Will delete a stack with all resources and data (using RemovalPolicy.DESTROY policy on dynamodb)
+* Cdk destroy will delete a stack with all resources and data (using RemovalPolicy.DESTROY policy on dynamodb)
 
 ## CDK first time setup guide
 * install aws-cli
