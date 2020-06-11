@@ -39,7 +39,7 @@ public class KomootCdkStack extends Stack {
                 .memorySize(256)
                 .build();
 
-        Function signupHandlerLambda = new Function(this, "challenge-greet-user-test", functionProps);
+        Function signupHandlerLambda = new Function(this, "challenge-greet-user", functionProps);
         usersTable.grantFullAccess(signupHandlerLambda);
 
         ITopic signupTopic = Topic.fromTopicArn(this, "challenge-backend-signups", "arn:aws:sns:eu-west-1:963797398573:challenge-backend-signups");

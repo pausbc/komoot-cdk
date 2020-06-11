@@ -1,18 +1,31 @@
-# Welcome to your CDK Java project!
+# Welcome to komoot-CDK!
+This is project will provision minimal environment to run signups-lambda
 
-This is a blank project for Java development with CDK.
+## Infrastructure
+Resources:
+* Dynamo db table `Users` - a persisted cache to hold most recently registered users.
+* Lambda function `challenge-greet-user`. Reads SNS Topic, constructs a greeting and sends it to recently registered user.
+* Topic `challenge-backend-signups` as a trigger for lambda function.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Notes 
+* Deployed to eu-west-1 region
+* Cdk destroy Will delete a stack with all resources and data (using RemovalPolicy.DESTROY policy on dynamodb)
 
-It is a [Maven](https://maven.apache.org/) based project, so you can open this project with any Maven compatible Java IDE to build and run tests.
+## CDK first time setup guide
+* install aws-cli
+* setup aws cli credentials
+* install npm
+* confirm installation `npm --version`
+    * If strange permission errors: `sudo chown -R $USER /usr/local/lib/node_modules`
+* install cdk `npm install -g aws-cdk`
+* confirm installation `cdk --version`
 
-## Useful commands
-
- * `mvn package`     compile and run tests
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
+## Stack management:
+* `cdk bootstrap` (if deploy first time)
+* list stacks: `cdk ls`
+* deploy stack:
+    * `mvn clean package`
+	* `cdk deploy`
+* delete stack: `cdk destroy`
 
 Enjoy!
