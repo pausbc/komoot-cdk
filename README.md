@@ -3,14 +3,14 @@ This is project will provision minimal environment to run [signups-lambda](https
 
 ## Infrastructure
 Resources:
-* Dynamo db table `Users` - a persisted cache to hold most recently registered users.
+* DynamoDB table `Users` - a persisted cache to hold most recently registered users.
 * Lambda function `challenge-greet-user`. Reads SNS Topic, constructs a greeting and sends it to recently registered user.
 * Topic `challenge-backend-signups` as a trigger for lambda function.
 
 ## Notes 
 * Make sure JAVA_HOME points to at least JDK 11 (tested with OpenJDK Corretto-11.0.7.10.1)
-* Deployed to eu-west-1 region
-* Cdk destroy will delete a stack with all resources and data (using RemovalPolicy.DESTROY policy on dynamodb)
+* Stack uses `eu-west-1` region
+* CDK destroy will delete a stack with all resources and data (using RemovalPolicy.DESTROY policy on DynamoDB)
 
 ## CDK first time setup guide
 * install aws-cli
