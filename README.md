@@ -8,6 +8,7 @@ Resources:
 * Topic `challenge-backend-signups` as a trigger for lambda function.
 
 ## Notes 
+* Make sure JAVA_HOME points to at least JDK 11 (tested with OpenJDK Corretto-11.0.7.10.1)
 * Deployed to eu-west-1 region
 * Cdk destroy will delete a stack with all resources and data (using RemovalPolicy.DESTROY policy on dynamodb)
 
