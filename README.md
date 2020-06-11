@@ -1,5 +1,5 @@
 # Welcome to komoot-CDK!
-This is project will provision minimal environment to run signups-lambda
+This is project will provision minimal environment to run [signups-lambda](https://github.com/pausbc/signups-lambda)
 
 ## Infrastructure
 Resources:
